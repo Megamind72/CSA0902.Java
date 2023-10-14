@@ -1,0 +1,33 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int a=-28,b=3,q=0;
+        if(a<=0)
+        {
+            a=-a;
+            while(a>=b)
+            {
+                a=a-b;
+                q++;
+            }
+            System.out.println("Quotient = "+-q+"\nRemainder = "+a);
+        }
+        else if(b<=0)
+        {
+            b=-b;
+            while(a>=b)
+            {
+                a=a-b;
+                q++;
+            }
+            System.out.println("Quotient = "+-q+"\nRemainder = "+a);
+        }
+        else{
+            while(a>=b)
+            {
+                a=a-b;
+                q++;
+            }
+        System.out.println("Quotient = "+q+"\nRemainder = "+a);
+        }
+    }
+}
