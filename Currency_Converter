@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class CurrencyConverter {
+    public static void main(String[] args) {
+        // Hardcoded exchange rates
+        double usdToEuro = 0.85;
+        double usdToPound = 0.75;
+        double usdToYen = 110.5;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Currency Converter");
+        System.out.println("1. USD to EUR");
+        System.out.println("2. USD to GBP");
+        System.out.println("3. USD to JPY");
+        System.out.print("Enter your choice (1/2/3): ");
+        int choice = scanner.nextInt();
+
+        if (choice >= 1 && choice <= 3) {
+            System.out.print("Enter the amount in USD: ");
+            double usdAmount = scanner.nextDouble();
+
+            double convertedAmount = 0;
+
+            // Perform the conversion based on user choice
+            switch (choice) {
+                case 1:
+                    convertedAmount = usdAmount * usdToEuro;
+                    break;
+                case 2:
+                    convertedAmount = usdAmount * usdToPound;
+                    break;
+                case 3:
+                    convertedAmount = usdAmount * usdToYen;
+                    break;
+            }
+
+            System.out.println("Converted amount: " + convertedAmount);
+        } else {
+            System.out.println("Invalid choice. Please select 1, 2, or 3.");
+        }
+
+        scanner.close();
+    }
+}
