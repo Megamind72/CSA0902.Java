@@ -1,0 +1,13 @@
+import java.util.*;
+public class R192125086{
+    public static void main(String args[]){
+        int arr[]={12, 45, 7, 23, 56, 89, 34, 8, 1};
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter Nth number: ");
+        int n=scanner.nextInt();
+        Arrays.sort(arr);
+        int l=arr.length;
+        System.out.println("Sorted Array: "+Arrays.toString(arr));
+        System.out.println(n+"th maximum elelment in array is "+arr[l-(n)]);
+    }
+}
