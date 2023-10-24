@@ -1,0 +1,18 @@
+import java.util.*;
+public class R192125086{
+    public static void main(String args[]){
+        int perfect[]={6,28,496,8128,130816,2096128};
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter N: ");
+        int n=scanner.nextInt();
+        if(n<=perfect.length && n!=0){
+            System.out.println("first "+n+" perfect numbers are: ");
+            for(int i=0;i<n;i++){
+                System.out.println(perfect[i]+" ");
+            }
+        }
+        else if(n<=0){
+            System.out.println("ERROR: please enter value greater than 0");
+        }
+    }
+}
